@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      const mergeArraysByIndex = (...arrays) => {
+        const result = [];
+
+        if (arrays.length === 0) {
+          return result;
+        }
+
+        const length = arrays[0].length;
+
+        for (let i = 0; i < length; i++) {
+          const tempArray = [];
+          for (let j = 0; j < arrays.length; j++) {
+            if (arrays[j].length !== length) {
+              console.log("Các mảng không có độ dài bằng nhau.");
+              return result;
+            }
+            tempArray.push(arrays[j][i]);
+          }
+          result.push(tempArray);
+        }
+
+        return result;
+      };
+
+      const arr1 = [1, 2, 3];
+      const arr2 = ["a", "b", "c"];
+      const arr3 = [true, false, true];
+
+      const mergedArray = mergeArraysByIndex(arr1, arr2, arr3);
+      console.log(mergedArray);
+    </script>
+  </body>
+</html>

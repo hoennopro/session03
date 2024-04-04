@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // Khai báo một biến số nguyên và một biến mảng bằng từ khóa const
+      const integerNumber = 10;
+      const array = [1, 2, 3];
+
+      // Thử gán lại giá trị cho biến số nguyên
+      // integerNumber = 20; // Lỗi: Assignment to constant variable.
+
+      // Thêm một phần tử vào mảng
+      array.push(4);
+
+      // In ra giá trị của biến số nguyên và mảng sau khi thực hiện thay đổi
+      console.log(integerNumber); // Kết quả: 10 (giá trị không thay đổi)
+      console.log(array); // Kết quả: [1, 2, 3, 4] (một phần tử mới được thêm vào mảng)
+    </script>
+  </body>
+</html>
